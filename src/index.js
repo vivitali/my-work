@@ -22,8 +22,13 @@ const store = createStore(
     applyMiddleware(...middleware)
 )
 
+const history = syncHistoryWithStore(browserHistory, store)
+
 ReactDOM.render( <Provider store = { store } >
-    <App/>
+    <Router history={history}>
+        <Route path="/" component={App}>
+    </Route>
+    </Router>
     </Provider>,
      document.getElementById('root'));
 registerServiceWorker();
