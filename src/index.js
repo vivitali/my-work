@@ -2,8 +2,8 @@ import 'babel-polyfill';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'react-router-redux';
-import { Provider } from 'react-redux'
-import { createLogger } from 'redux-logger'
+import { Provider } from 'react-redux';
+import { createLogger } from 'redux-logger';
 import './index.css';
 import App from './App';
 import registerServiceWorker from './registerServiceWorker';
@@ -17,10 +17,11 @@ const history = createHistory();
 const store = configureStore(initialState, history);
 
 ReactDOM.render(
-<Provider store = { store } >
-<ConnectedRouter history={history}>
-<App />
-</ConnectedRouter>
-</Provider>,
-document.getElementById('root'));
+  <Provider store={store}>
+    <ConnectedRouter history={history}>
+      <App />
+    </ConnectedRouter>
+  </Provider>,
+  document.getElementById('root')
+);
 registerServiceWorker();
