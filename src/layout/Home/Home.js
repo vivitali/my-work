@@ -1,8 +1,13 @@
 import React, { PureComponent } from 'react';
-import { Menu } from '../../containers/Menu/Menu';
+import { Header } from '../../containers/Header/Hader';
 
 export default class Home extends PureComponent {
   render() {
-    return <Menu />;
+    return (
+      <div className="container-fluid">
+        <Header />
+        <div className="row" />
+      </div>
+    );
   }
 }
