@@ -6,8 +6,8 @@ export default class Home extends PureComponent {
   render() {
     return (
       <div className="container main-block">
-          <Actions />
-        </div>
+        <Actions />
+      </div>
     );
   }
 }
