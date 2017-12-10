@@ -1,0 +1,41 @@
+/* typography
+cyan clorsheme  https://material.io/guidelines/style/color.html#color-color-palette*/
+.action-card {
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);
+  transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1);
+  margin: 20px;
+  min-width: 200px;
+  min-height: 200px;
+  border: 0;
+  position: relative; }
+  .action-card:hover {
+    box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+  .action-card:first-child {
+    margin-left: 0; }
+  .action-card:last-child {
+    margin-right: 0; }
+  @media (max-width: 767px) {
+    .action-card {
+      margin-left: 0;
+      margin-right: 0; } }
+  .action-card .button {
+    position: absolute;
+    bottom: 29px;
+    right: 20px;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    box-shadow: 1px 2px 3px 0 rgba(0, 0, 0, 0.4);
+    background-color: #1a237e;
+    line-height: 40px;
+    cursor: pointer;
+    transition: all 0.6s cubic-bezier(0.25, 0.8, 0.25, 1); }
+    .action-card .button:hover {
+      box-shadow: 0 14px 28px rgba(0, 0, 0, 0.25), 0 10px 10px rgba(0, 0, 0, 0.22); }
+  .action-card .img {
+    background-color: #b2ebf2;
+    font-size: 100px;
+    height: 160px; }
+  .action-card .header {
+    background-color: #00bcd4;
+    line-height: 3rem; }

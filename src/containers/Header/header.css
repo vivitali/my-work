@@ -1,4 +1,5 @@
 /* typography
 cyan clorsheme  https://material.io/guidelines/style/color.html#color-color-palette*/
 .navbar {
-  background-color: #00bcd4; }
+  background-color: #00bcd4;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.26); }

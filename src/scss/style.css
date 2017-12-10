@@ -9,3 +9,9 @@ body {
   body span,
   body i {
     color: white; }
+  body a,
+  body a:hover {
+    text-decoration: none; }
+  body .main-block {
+    margin-top: 65px;
+    color: #1b1e21; }

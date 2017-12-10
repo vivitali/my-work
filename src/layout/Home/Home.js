@@ -1,13 +1,13 @@
 import React, { PureComponent } from 'react';
-import { Header } from '../../containers/Header/Hader';
+import { Actions } from '../../containers/Actions/Actions';
+import './home.scss';
 
 export default class Home extends PureComponent {
   render() {
     return (
-      <div className="container-fluid">
-        <Header />
-        <div className="row" />
-      </div>
+      <div className="container main-block">
+          <Actions />
+        </div>
     );
   }
 }

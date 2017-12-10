@@ -3,8 +3,6 @@ import { Link } from 'react-router-dom';
 import { Icon } from '../../compoents/Icon/Icon';
 import './header.scss';
 
-const menuItems = [];
-
 export const Header = () => {
   return (
     <nav className="navbar fixed-top">
