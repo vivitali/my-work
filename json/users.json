@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "fname": "Kristin",
+    "lname": "Smit",
+    "position": "manager", // or pharmasist
+    "office": "a35",
+    "role": "manager" //admin, director, manager, employee
+  },
+  {
+    "id": 2,
+    "fname": "Kollin",
+    "lname": "Fert",
+    "position": "pharmasist", // or pharmasist
+    "office": "a35",
+    "role": "employee" //admin, director, manager, employee
+  },
+  {
+    "id":"3",
+    "fname": "Rebecca",
+    "lname": "Trudo",
+    "position": "pharmasist", // or pharmasist
+    "office": "a35",
+    "role": "employee" //admin, director, manager, employee
+  },
+  {
+    "id": 4,
+    "fname": "Karolina",
+    "lname": "Reddic",
+    "position": "pharmasist", // or pharmasist
+    "office": "a35",
+    "role": "employee" //admin, director, manager, employee
+  },
+  {
+    "id": 5,
+    "fname": "Victoria",
+    "lname": "Backhem",
+    "position": "cleaner", // or pharmasist
+    "office": "a35",
+    "role": "employee" //admin, director, manager, employee
+  },
+]
