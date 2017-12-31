@@ -1,0 +1,47 @@
+[
+  {
+    "id": "1",
+    "fname": "Kristin",
+    "lname": "Smit",
+    "img": "user",
+    "position": "manager",
+    "office": "a35",
+    "role": "manager"
+  },
+  {
+    "id": 2,
+    "fname": "Kollin",
+    "lname": "Fert",
+    "img": "user-o",
+    "position": "pharmacist",
+    "office": "a35",
+    "role": "employee"
+  },
+  {
+    "id":"3",
+    "fname": "Rebecca",
+    "lname": "Trudo",
+    "img": "user-o",
+    "position": "pharmacist",
+    "office": "a35",
+    "role": "employee"
+  },
+  {
+    "id": 4,
+    "fname": "Karolina",
+    "lname": "Reddic",
+    "img": "user-o",
+    "position": "pharmacist",
+    "office": "a35",
+    "role": "employee"
+  },
+  {
+    "id": 5,
+    "fname": "Victoria",
+    "lname": "Backhem",
+    "img": "user-o",
+    "position": "cleaner",
+    "office": "a35",
+    "role": "employee"
+  }
+]
