@@ -9,7 +9,7 @@ import users from '../../json/users';
 export function* loadUsers() {
   try {
     const usersEnpoint = 'get/users/endpoint';
-    yield put(loadUsersSuccess({ data: users }));
+    yield put(loadUsersSuccess({ users }));
   } catch (err) {
     yield put(loadUsersFailure(err));
   }

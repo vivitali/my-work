@@ -7,10 +7,12 @@ export const LOAD_USERS_FAILURE = 'my/LOAD_USERS_FAILURE';
 export const loadUsersPending = () => ({
   type: LOAD_USERS_PENDING,
 });
-export const loadUsersSuccess = ({ data }) => ({
-  type: LOAD_USERS_SUCCESS,
-  payload: data,
-});
+export const loadUsersSuccess = ({ users }) => {
+  return {
+    type: LOAD_USERS_SUCCESS,
+    payload: users,
+  };
+};
 export const loadUsersFailure = ({ error }) => ({
   type: LOAD_USERS_FAILURE,
   error,
@@ -18,34 +20,27 @@ export const loadUsersFailure = ({ error }) => ({
 
 const initialState = fromJS({
   loading: false,
-  loaded: true,
+  loaded: false,
   error: null,
-  users: {},
+  users: null,
 });
 
 const usersReducer = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_USERS_PENDING: {
-      return {
-        ...state,
-        loading: true,
-      };
+      return state.set('loading', true);
     }
     case LOAD_USERS_SUCCESS: {
-      return {
-        ...state,
-        loading: false,
-        loaded: true,
-        users: action.payload,
-      };
+      return state
+        .set('loading', false)
+        .set('loaded', true)
+        .set('users', action.payload);
     }
     case LOAD_USERS_FAILURE: {
-      return {
-        ...state,
-        loading: false,
-        loaded: false,
-        error: action.error,
-      };
+      return state
+        .set('loading', false)
+        .set('loaded', true)
+        .set('error', action.error);
     }
     default:
       return state;
