@@ -1,7 +1,7 @@
 @import '../../scss/variables';
 @import '../../scss/mixins';
 
-.action-card {
+.alter-card {
   @include cardShadow();
   margin: 20px;
   min-width: 200px;
@@ -16,6 +16,7 @@
   &:last-child {
     margin-right: 0;
   }
+
   @media (max-width: 767px) {
     margin-left: 0;
     margin-right: 0;
@@ -38,10 +39,28 @@
     }
   }
 
-  .img {
-    background-color: $blizzard-blue;
-    font-size: 100px;
+  .main-block {
+
     height: 160px;
+    padding: 20px;
+    background-color: $blizzard-blue;
+    text-align: right;
+    div {
+      display: flex;
+      justify-content: flex-end;
+      align-items: center;
+      line-height: 2rem;
+    }
+    div, span, i  {
+      color: $mine-shaft;
+    }
+    i {
+    padding: 0 20px;
+    }
+    .title {
+      text-align: left;
+      margin-right: auto;
+    }
   }
 
   .header {
