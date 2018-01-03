@@ -39,8 +39,7 @@
     }
   }
 
-  .main-block {
-
+  .alter-block {
     height: 160px;
     padding: 20px;
     background-color: $blizzard-blue;
@@ -51,11 +50,13 @@
       align-items: center;
       line-height: 2rem;
     }
-    div, span, i  {
+    div,
+    span,
+    i {
       color: $mine-shaft;
     }
     i {
-    padding: 0 20px;
+      padding: 0 20px;
     }
     .title {
       text-align: left;

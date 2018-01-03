@@ -5,7 +5,7 @@ import './scss/vendor.scss';
 import Home from './containers/Home/Home';
 import { Header } from './containers/Header/Hader';
 import Users from './containers/Users/loadable';
-import Alterations from './containers/Alterations/Alterations';
+import Alterations from './containers/Alterations/loadable';
 import Schedule from './containers/Schedule/Shedule';
 
 class App extends Component {

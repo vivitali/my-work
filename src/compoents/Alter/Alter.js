@@ -13,20 +13,25 @@ export const Alter = ({ alterItem }) => {
   return (
     <div className="alter-card">
       <Link to={`alters/${alterItem.id}`}>
-        <div className="main-block">
+        <div className="alter-block">
           <div>
-            <span className="title">Початок зміни</span>{' '}
-            <Icon icon="clock-o" />
-            <span className="value">{parseTime(alterItem.startTime).format('HH:mm')}</span>
+            <span className="title">Початок зміни</span> <Icon icon="clock-o" />
+            <span className="value">
+              {parseTime(alterItem.startTime).format('HH:mm')}
+            </span>
           </div>
           <div>
             <span className="title">Кінець зміни</span>{' '}
             <Icon className="my-icon" icon="clock-o" />
-            <span className="value">{parseTime(alterItem.endTime).format('HH:mm')}</span>
+            <span className="value">
+              {parseTime(alterItem.endTime).format('HH:mm')}
+            </span>
           </div>
           <div>
             <span className="title">Тривалість</span>{' '}
-            <span className="value">{formattedDiff(alterItem.endTime, alterItem.startTime)}</span>
+            <span className="value">
+              {formattedDiff(alterItem.endTime, alterItem.startTime)}
+            </span>
           </div>
         </div>
       </Link>
