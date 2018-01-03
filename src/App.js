@@ -2,11 +2,11 @@ import React, { Component } from 'react';
 import { Switch, Route } from 'react-router-dom';
 import './App.scss';
 import './scss/vendor.scss';
-import Home from './layout/Home/Home';
+import Home from './containers/Home/Home';
 import { Header } from './containers/Header/Hader';
-import Users from './layout/Users/loadable';
-import Alterations from './layout/Alterations/Alterations';
-import Schedule from './layout/Schedule/Shedule';
+import Users from './containers/Users/loadable';
+import Alterations from './containers/Alterations/Alterations';
+import Schedule from './containers/Schedule/Shedule';
 
 class App extends Component {
   render() {

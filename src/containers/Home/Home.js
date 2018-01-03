@@ -1,5 +1,5 @@
 import React, { PureComponent } from 'react';
-import { Actions } from '../../containers/Actions/Actions';
+import { Actions } from '../Actions/Actions';
 import './home.scss';
 
 export default class Home extends PureComponent {
