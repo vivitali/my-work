@@ -1,7 +1,19 @@
 import React, { PureComponent } from 'react';
+import { User } from '../../compoents/User/User';
 
-export default class Users extends PureComponent {
+export class Users extends PureComponent {
+  componentDidMount() {
+    this.props.onLoadData();
+  }
   render() {
-    return <div className="container main-block">Працівники</div>;
+    const { users } = this.props;
+    return (
+      <div className="d-md-flex justify-content-md-center mt-5 flex-md-wrap">
+        {users &&
+          users.map((item, i) => (
+            <User cardItem={item} key={`${item.id}_${i}`} />
+          ))}
+      </div>
+    );
   }
 }

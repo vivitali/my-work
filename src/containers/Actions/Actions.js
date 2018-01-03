@@ -1,7 +1,6 @@
 import React from 'react';
-import { Icon } from '../../compoents/Icon/Icon';
 import './actions.scss';
-import { ActionCard } from '../../compoents/ActionCard/ActionCard';
+import { Card } from '../../compoents/Card/Card';
 
 const actions = [
   {
@@ -26,8 +25,10 @@ const actions = [
 
 export const Actions = () => {
   return (
-    <div className="d-md-flex justify-content-md-center">
-      {actions.map(item => <ActionCard action={item} />)}
+    <div className="d-md-flex justify-content-md-center flex-md-wrap mt-5">
+      {actions.map((item, i) => (
+        <Card cardItem={item} key={`${item.id}_${i}`} />
+      ))}
     </div>
   );
 };

@@ -4,7 +4,7 @@ import './App.scss';
 import './scss/vendor.scss';
 import Home from './layout/Home/Home';
 import { Header } from './containers/Header/Hader';
-import Users from './layout/Users/Users';
+import Users from './layout/Users/loadable';
 import Alterations from './layout/Alterations/Alterations';
 import Schedule from './layout/Schedule/Shedule';
 

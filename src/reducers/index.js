@@ -1,10 +1,11 @@
-import { combineReducers } from 'redux';
+import { combineReducers } from 'redux-immutable';
 import loadApp from './loadApp';
 import { routerReducer } from 'react-router-redux';
 
-const myWorkApp = combineReducers({
-  loadApp,
-  routing: routerReducer,
-});
-
-export default myWorkApp;
+export default function createReducer(injectedReducers) {
+  return combineReducers({
+    loadApp,
+    routing: routerReducer,
+    ...injectedReducers,
+  });
+}
