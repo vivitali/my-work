@@ -1,3 +1,4 @@
+import { fromJS } from 'immutable';
 export const LOAD_MY_WORK_PENDING = 'my/LOAD_MY_WORK_PENDING';
 export const LOAD_MY_WORK_SUCCESS = 'my/LOAD_MY_WORK_SUCCESS';
 export const LOAD_MY_WORK_FAILURE = 'my/LOAD_MY_WORK_FAILURE';
@@ -14,36 +15,29 @@ export const loadMyWorkFailure = ({ error }) => ({
   error,
 });
 
-const initialState = {
+const initialState = fromJS({
   loading: false,
-  loaded: true,
+  loaded: false,
   error: null,
-  data: {},
-};
+  branch: {},
+});
 
 const loadApp = (state = initialState, action) => {
   switch (action.type) {
     case LOAD_MY_WORK_PENDING: {
-      return {
-        ...state,
-        loading: true,
-      };
+      return state.set('loading', true);
     }
     case LOAD_MY_WORK_SUCCESS: {
-      return {
-        ...state,
-        loading: false,
-        loaded: true,
-        data: action.payload,
-      };
+      return state
+        .set('loading', false)
+        .set('loaded', true)
+        .set('branch', action.payload);
     }
     case LOAD_MY_WORK_FAILURE: {
-      return {
-        ...state,
-        loading: false,
-        loaded: false,
-        error: action.error,
-      };
+      return state
+        .set('loading', false)
+        .set('loaded', true)
+        .set('error', action.error);
     }
     default:
       return state;

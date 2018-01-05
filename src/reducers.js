@@ -41,7 +41,7 @@ function routeReducer(state = routeInitialState, action) {
 export default function createReducer(injectedReducers) {
   return combineReducers({
     route: routeReducer,
-    menu: loadApp,
+    global: loadApp,
     ...injectedReducers,
   });
 }

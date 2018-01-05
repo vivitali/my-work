@@ -12,7 +12,7 @@ export const Alter = ({ alterItem }) => {
 
   return (
     <div className="alter-card">
-      <Link to={`alters/${alterItem.id}`}>
+      <Link to={`alterations/${alterItem.id}`}>
         <div className="alter-block">
           <div>
             <span className="title">Початок зміни</span> <Icon icon="clock-o" />
@@ -38,7 +38,7 @@ export const Alter = ({ alterItem }) => {
       <span className="button">
         <Icon icon="pencil" />
       </span>
-      <Link to={`alter/${alterItem.id}`}>
+      <Link to={`alterations/${alterItem.id}`}>
         <div className="header">
           <div className="name">{alterItem.name}</div>
         </div>
