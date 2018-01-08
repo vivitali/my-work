@@ -13,10 +13,7 @@ const withSaga = injectSaga({ key: 'users', saga });
 
 export function mapDispatchToProps(dispatch) {
   return {
-    onLoadData: evt => {
-      if (evt !== undefined && evt.preventDefault) evt.preventDefault();
-      dispatch(loadUsersPending());
-    },
+    onLoadData: () => dispatch(loadUsersPending()),
   };
 }
 const mapStateToProps = createStructuredSelector({

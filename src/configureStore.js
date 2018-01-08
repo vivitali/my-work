@@ -8,7 +8,6 @@ import { routerMiddleware } from 'react-router-redux';
 import createSagaMiddleware from 'redux-saga';
 import createReducer from './reducers';
 import { createLogger } from 'redux-logger';
-
 const sagaMiddleware = createSagaMiddleware();
 const loggerMiddleware = createLogger();
 

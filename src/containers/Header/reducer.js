@@ -1,53 +1,50 @@
-export const LOAD_MENU_PENDING = 'my/LOAD_MENU_PENDING';
-export const LOAD_MENU_SUCCESS = 'my/LOAD_MENU_SUCCESS';
-export const LOAD_MENU_FAILURE = 'my/LOAD_MENU_FAILURE';
+import { fromJS } from 'immutable';
 
-export const loadMenuPending = () => ({
-  type: LOAD_MENU_PENDING,
+export const LOAD_BRANCH_PENDING = 'my/LOAD_BRANCH_PENDING';
+export const LOAD_BRANCH_SUCCESS = 'my/LOAD_BRANCH_SUCCESS';
+export const LOAD_BRANCH_FAILURE = 'my/LOAD_BRANCH_FAILURE';
+
+export const loadBranchPending = () => ({
+  type: LOAD_BRANCH_PENDING,
 });
-export const loadMenuSuccess = ({ data }) => ({
-  type: LOAD_MENU_SUCCESS,
-  payload: data,
-});
-export const loadMenuFailure = ({ error }) => ({
-  type: LOAD_MENU_FAILURE,
+export const loadBranchSuccess = ({ data }) => {
+  return {
+    type: LOAD_BRANCH_SUCCESS,
+    payload: data,
+  };
+};
+export const loadBranchFailure = ({ error }) => ({
+  type: LOAD_BRANCH_FAILURE,
   error,
 });
 
-const initialState = {
+const initialState = fromJS({
   loading: false,
-  loaded: true,
+  loaded: false,
   error: null,
-  data: {},
-};
+  branch: null,
+});
 
-const loadApp = (state = initialState, action) => {
+const myWorkReducer = (state = initialState, action) => {
   switch (action.type) {
-    case LOAD_MENU_PENDING: {
-      return {
-        ...state,
-        loading: true,
-      };
+    case LOAD_BRANCH_PENDING: {
+      return state.set('loading', true);
     }
-    case LOAD_MENU_SUCCESS: {
-      return {
-        ...state,
-        loading: false,
-        loaded: true,
-        data: action.payload,
-      };
+    case LOAD_BRANCH_SUCCESS: {
+      return state
+        .set('loading', false)
+        .set('loaded', true)
+        .set('branch', action.payload);
     }
-    case LOAD_MENU_FAILURE: {
-      return {
-        ...state,
-        loading: false,
-        loaded: false,
-        error: action.error,
-      };
+    case LOAD_BRANCH_FAILURE: {
+      return state
+        .set('loading', false)
+        .set('loaded', true)
+        .set('error', action.error);
     }
     default:
       return state;
   }
 };
 
-export default loadApp;
+export default myWorkReducer;

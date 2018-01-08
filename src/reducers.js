@@ -5,7 +5,6 @@
 import { combineReducers } from 'redux-immutable';
 import { fromJS } from 'immutable';
 import { LOCATION_CHANGE } from 'react-router-redux';
-import loadApp from './reducers/loadApp';
 
 /*
  * routeReducer
@@ -41,7 +40,6 @@ function routeReducer(state = routeInitialState, action) {
 export default function createReducer(injectedReducers) {
   return combineReducers({
     route: routeReducer,
-    global: loadApp,
     ...injectedReducers,
   });
 }

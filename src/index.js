@@ -4,7 +4,7 @@ import ReactDOM from 'react-dom';
 import { ConnectedRouter } from 'react-router-redux';
 import { Provider } from 'react-redux';
 import './scss/style.scss';
-import App from './containers/App/index';
+import App from './containers/App/App';
 import registerServiceWorker from './registerServiceWorker';
 import createHistory from 'history/createBrowserHistory';
 

@@ -5,7 +5,6 @@ import { Link } from 'react-router-dom';
 import moment from 'moment';
 
 export const Alter = ({ alterItem }) => {
-  moment.locale('uk');
   const parseTime = time => moment(time, 'HH:mm:ss');
   const formattedDiff = (end, start) =>
     moment.duration(parseTime(end).diff(parseTime(start))).humanize();
