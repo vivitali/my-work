@@ -2,6 +2,7 @@ import React from 'react';
 import './calendar.scss';
 import moment from 'moment';
 import { DayCell } from './DayCell';
+import { Employee } from './Employee';
 
 export class Calendar extends React.Component {
   createCalendarArr() {
@@ -32,11 +33,27 @@ export class Calendar extends React.Component {
 
   render() {
     window.moment = moment; // debug purpose
+    const { users } = this.props;
     const calendar = this.createCalendarArr();
+    const rows = Math.ceil(calendar.length / 7);
+    const LINE_HEIGHT = 24;
+    const cellStyle = {
+      paddingTop: `${LINE_HEIGHT}px`,
+      height: `${
+        users && users.length > 4 ? LINE_HEIGHT * (users.length + 1) + 1 : 125
+      }px`,
+      minHeight: '125px',
+    };
 
     return (
-      <div>
-        <aside className="calendar-aside" />
+      <div className="d-flex">
+        <aside className="calendar-aside">
+          {Array(rows)
+            .fill(1)
+            .map((el, i) => (
+              <DayCell key={`day_${i}`} users={users} styles={cellStyle} />
+            ))}
+        </aside>
         <div className="calendar">
           <dl className="calendar-title">
             {this.getWeekDDays().map((item, i) => (
@@ -45,7 +62,12 @@ export class Calendar extends React.Component {
           </dl>
           <section className="calendar-main">
             {calendar.map((item, i) => (
-              <DayCell key={`day_${i}`} day={item.format('D')} />
+              <DayCell
+                key={`day_${i}`}
+                day={item.format('D')}
+                styles={cellStyle}
+                users={users}
+              />
             ))}
           </section>
         </div>

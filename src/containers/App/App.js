@@ -6,7 +6,7 @@ import Home from './../Home/Home';
 import Header from '../Header/loadable';
 import Users from './../Users/loadable';
 import Alterations from './../Alterations/loadable';
-import Schedule from './../Schedule/Shedule';
+import Schedule from './../Schedule/loadable';
 import moment from 'moment/moment';
 
 class App extends Component {

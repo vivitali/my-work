@@ -14,6 +14,11 @@
 
 .calendar {
   color: $mine-shaft;
+  width: 86%;
+  &-aside {
+    margin-top: 40px;
+    width: 14%;
+  }
   &-main {
     border-top: $calendar-border;
     border-left: $calendar-border;
@@ -30,7 +35,6 @@
   }
   .day-cell {
     position: relative;
-    display: flex;
     flex: 1 1 14.28571%;
     max-width: 14.28571%;
     min-height: 125px;
