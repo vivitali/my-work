@@ -1,0 +1,52 @@
+@import '../../scss/variables';
+@import '../../scss/mixins';
+
+@mixin holidays() {
+  &:nth-child(7n-1),
+  &:nth-child(7n-1) span {
+    color: blue !important;
+  }
+  &:nth-child(7n + 0),
+  &:nth-child(7n + 0) span {
+    color: red !important;
+  }
+}
+
+.calendar {
+  color: $mine-shaft;
+  width: 86%;
+  &-aside {
+    margin-top: 40px;
+    width: 14%;
+  }
+  &-main {
+    border-top: $calendar-border;
+    border-left: $calendar-border;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  &-title {
+    display: flex;
+    dt {
+      text-align: center;
+      flex: 1;
+      @include holidays();
+    }
+  }
+  .day-cell {
+    position: relative;
+    flex: 1 1 14.28571%;
+    max-width: 14.28571%;
+    min-height: 125px;
+    padding: 5px 0;
+    border-right: $calendar-border;
+    border-bottom: $calendar-border;
+    @include holidays();
+    &-number {
+      color: $mine-shaft;
+      position: absolute;
+      top: 0;
+      left: 5px;
+    }
+  }
+}

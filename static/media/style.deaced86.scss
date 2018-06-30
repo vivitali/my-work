@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+
+  a,
+  span,
+  i {
+    color: white;
+  }
+  a,
+  a:hover {
+    text-decoration: none;
+  }
+
+  .main-block {
+    margin-top: 65px;
+    //temporary
+    color: #1b1e21;
+  }
+}
